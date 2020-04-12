@@ -1,5 +1,6 @@
 package by.academy.lesson2;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Task2Lesson2 {
@@ -13,39 +14,38 @@ public class Task2Lesson2 {
 //	d) если char, вывести код символа
 //	e) String, вывести на экран строку в виде ("Hello " + переменная)
 //	f) во всех остальных случаях вывести на экран ("Unsupported type");
+		System.out.println("Введите тип данных (int, double, float, char, String ) ");
+		Scanner inputType = new Scanner(System.in);
+		String type = inputType.nextLine();
 
-		System.out.println ("Введите тип данных (int, double, float, char, String ) ");
-		Scanner inputType1 = new Scanner (System.in);
-		String type = inputType1.next ();
-
-		System.out.println ("Введите число  ");
-		Scanner inputType2 = new Scanner (System.in);
-		int i = inputType2.nextInt();
-
-
-		switch (type){
+		switch (type) {
 		case ("int"):
-			System.out.println ( i % 2 );
-		break;
-
+			System.out.println("Введите число ");
+			int Инт = inputType.nextInt();
+			System.out.println(Инт % 2);
+			break;
 		case ("double"):
-			System.out.println (i * 0.3);
-		break;
-
+			System.out.println("Введите число ");
+			double Дубль = inputType.nextDouble();
+			System.out.println(Дубль * 0.3);
+			break;
 		case ("float"):
-			System.out.println (i * i);
-		break;
-
+			System.out.println("Введите число ");
+			float Флоат = inputType.nextFloat();
+			System.out.println(Флоат * Флоат);
+			break;
 		case ("char"):
-			System.out.println((int) type.charAt(i));
-
-		break;
+			System.out.println("Введите число ");
+			char Чар = inputType.next().charAt(0);
+			System.out.println((int) Чар);
+			break;
 		case ("String"):
-			System.out.println ("Hello" + i);
-
+			System.out.println("Введите число ");
+			String Стринг = inputType.next();
+			System.out.println("Hello " + Стринг);
+			break;
 		default:
-			System.out.println("Unsupported type");
-
+			System.out.println("Неизвестный тип");
 		}
 	}
 }

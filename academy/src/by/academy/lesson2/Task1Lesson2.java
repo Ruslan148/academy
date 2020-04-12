@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Task1Lesson2 {
 
 	public static void main(String[] args) {
-
 //		Задание 1.
 //		Ввести с консоли сумму покупки в магазине и возраст покупателя, 	
 //		в зависимости от суммы вывести на экран ФИНАЛЬНУЮ ЦЕНУ с учетом скидки.
@@ -25,9 +24,8 @@ public class Task1Lesson2 {
 		System.out.print("Введите возраст покупателя ");
 		int m = inputFigure.nextInt();
 
-		if (i < 0) {
-			System.out.println("Введена неккоректная сумма");
-		}
+		if (i < 0)
+			return;
 		if (i < 100) {
 			System.out.println("Итого:" + (i * 0.95f));
 		} else if (i >= 100 && i < 200) {
@@ -42,9 +40,6 @@ public class Task1Lesson2 {
 			System.out.println("Итого:" + (i * 0.85f));
 		} else if (i >= 400) {
 			System.out.println("Итого:" + (i * 0.80f));
-
 		}
-
 	}
-
 }

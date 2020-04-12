@@ -1,23 +1,18 @@
 package by.academy.lesson2;
-
 import java.util.Scanner;
-
 public class Task6Lesson2 {
 	public static void main(String[] args) {
 //		Ввести две строки с консоли. Определить, является ли одна строка перестановкой 
 //		символов другой строки. Учитываем регистр. Не использовать сортировку :) 
 //	Например: 
 //	1.	“hello” и “hlleo” -> true
-//	2.	“hello” и “art” -> false
-	}
-
-	public boolean permutation() {
+	}		//	2.	“hello” и “art” -> false
+	public boolean permutation(String s, String t) {
 		System.out.print("Введите слово ");
 		Scanner inputFigure = new Scanner(System.in);
 		String s = inputFigure.nextLine();
 		System.out.print("Введите второе слово");
 		String t = inputFigure.nextLine();
-
 		if (s.length() != t.length()) {
 			return false; // возвращает значение
 		}
@@ -33,8 +28,9 @@ public class Task6Lesson2 {
 				return false;
 			}
 		}
-		 System.out.println(true);
-
+		return true;
+	}
+		System.out.print(permutation);
 	}
 }
 	
