@@ -1,4 +1,4 @@
-package by.academy.lesson2;
+package homework2;
 
 public class TechnicsForHomeTask3Les3 {
 	/*
@@ -8,21 +8,21 @@ public class TechnicsForHomeTask3Les3 {
 	 */
 	public static void main(String[] args) {
 
-		MarkOfFridge atlant = new MarkOfFridge();
+		MarkOfFridge atlant = new Atlant();
 		atlant.push("On");
 		Fridge numb1 = new Fridge();
 		numb1.consumption(221);
 		System.out.println(" ");
-		MarkOfTV horizont = new MarkOfTV();
+		MarkOfTV horizont = new Horizont();
 		horizont.push("On");
 		TV numb2 = new TV();
 		numb2.consumption(666);
 		System.out.println(" ");
-		MarkOfWashingMachine zanussi = new MarkOfWashingMachine();
-		zanussi.push("Off");
-		WashingMachine numb3 = new WashingMachine();
+		WashingMachine numb3 = new MarkOfWashingMachine();
 		numb3.consumption(350);
 		System.out.println(" ");
+		MarkOfWashingMachine zanussi = new Zanussi();
+		zanussi.push("Off");
 	}
 
 }
@@ -51,6 +51,10 @@ class MarkOfFridge extends Fridge {
 	}
 }
 
+class Atlant extends MarkOfFridge {
+
+}
+
 class TV {
 	String nameTV = "Horizont ";
 	int powerСonsumption;
@@ -73,6 +77,10 @@ class MarkOfTV extends TV {
 			System.out.println("Нажми на кнопку");
 		}
 	}
+}
+
+class Horizont extends MarkOfTV {
+
 }
 
 class WashingMachine {
@@ -98,3 +106,8 @@ class MarkOfWashingMachine extends WashingMachine {
 		}
 	}
 }
+		class Zanussi extends MarkOfWashingMachine {
+
+		}
+	
+
